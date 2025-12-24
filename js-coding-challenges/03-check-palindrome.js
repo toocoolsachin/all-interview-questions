@@ -12,6 +12,6 @@ const checkPallindrome = (str) => {
   return true
 }
 
-console.log(checkPallindrome('race a car'))
-console.log(checkPallindrome('nolemon,nomelon'))
-console.log(checkPallindrome('madam'))
+console.log(checkPallindrome('race a car')) // false
+console.log(checkPallindrome('nolemon,nomelon')) // true
+console.log(checkPallindrome('madam')) // true

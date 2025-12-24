@@ -19,3 +19,19 @@ console.timeEnd()
 const nestedArray = [1, [2, [3, 4], [7, 5]], 6]
 const flattenedArray = flattenArray(nestedArray)
 console.log(flattenedArray) // Output: [1, 2, 3, 4, 7, 5, 6]
+
+const result = []
+
+function flatArray(arr) {
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      flatArray(item)
+    } else {
+      result.push(item)
+    }
+  })
+
+  return result
+}
+
+console.log(flatArray([1, [2, [3, 4], [7, 5]], 6]))
